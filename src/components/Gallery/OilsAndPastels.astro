@@ -1,0 +1,53 @@
+---
+import GalleryItem from '../GalleryItem.astro'
+import boy_with_basket from '@gallery/oils-and-pastels/boy_with_basket.webp'
+import cats_on_kitchen_table_1 from '@gallery/oils-and-pastels/cats_on_kitchen_table_1.webp'
+import cats_on_kitchen_table_2 from '@gallery/oils-and-pastels/cats_on_kitchen_table_2.webp'
+import chickens from '@gallery/oils-and-pastels/chickens.webp'
+import clotheslines from '@gallery/oils-and-pastels/clotheslines.webp'
+import fall from '@gallery/oils-and-pastels/fall.webp'
+import fractured_pastels from '@gallery/oils-and-pastels/fractured_pastels.webp'
+import gabi from '@gallery/oils-and-pastels/gabi.webp'
+import ginger_boy from '@gallery/oils-and-pastels/ginger_boy.webp'
+import ginger_cat from '@gallery/oils-and-pastels/ginger_cat.webp'
+import grandmothers_talking from '@gallery/oils-and-pastels/grandmothers_talking.webp'
+import kicha from '@gallery/oils-and-pastels/kicha.webp'
+import kuba_1 from '@gallery/oils-and-pastels/kuba_1.webp'
+import kuba_2 from '@gallery/oils-and-pastels/kuba_2.webp'
+import ladies_pastel from '@gallery/oils-and-pastels/ladies_pastel.webp'
+import mexican_lady from '@gallery/oils-and-pastels/mexican_lady.webp'
+import red_fence from '@gallery/oils-and-pastels/red_fence.webp'
+---
+
+<!-- Oils and Pastels -->
+<section id="oils-and-pastels" class="translate-y-4 pt-20 opacity-0 transition-all duration-500">
+	<h1 class="section__title text-center text-4xl font-semibold">Oils & Pastels</h1>
+	<div class="custom-grid grid grid-cols-1 gap-1 md:grid-cols-24">
+		<GalleryItem src={boy_with_basket} alt="Boy with Basket" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={cats_on_kitchen_table_1} alt="Cats on Kitchen Table 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={cats_on_kitchen_table_2} alt="Cats on Kitchen Table 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={chickens} alt="Chickens" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={clotheslines} alt="Clotheslines" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={fall} alt="Fall" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={fractured_pastels} alt="Fractured Pastels" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={gabi} alt="Gabi" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={ginger_boy} alt="Ginger Boy" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={ginger_cat} alt="Ginger Cat" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={grandmothers_talking} alt="Grandmothers Talking" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={kicha} alt="Kicha" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={kuba_1} alt="Kuba 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={kuba_2} alt="Kuba 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={ladies_pastel} alt="Ladies Pastel" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={mexican_lady} alt="Mexican Lady" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={red_fence} alt="Red Fence" class="md:col-span-4 md:row-span-4" />
+	</div>
+</section>
+
+<style>
+	@media screen and (min-width: 768px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(20, 1fr);
+		}
+	}
+</style>

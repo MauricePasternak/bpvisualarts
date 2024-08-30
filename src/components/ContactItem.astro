@@ -1,0 +1,15 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="contact__information flex items-center gap-2">
+	<slot name="icon">
+		<Icon name="mdi:phone" class="uil uil-phone contact__icon h-10 w-10" />
+	</slot>
+	<div class="contact__givens flex flex-col">
+		<slot name="info">
+			<h3 class="contact__title text-xl font-semibold">Call Me</h3>
+			<span class="contact__subtitle text-lg font-light">437-886-8637</span>
+		</slot>
+	</div>
+</div>

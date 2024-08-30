@@ -1,0 +1,69 @@
+---
+import basset from '@gallery/mixed-media/basset.webp'
+import chihuahua_1 from '@gallery/mixed-media/chihuahua_1.webp'
+import chihuahua_2 from '@gallery/mixed-media/chihuahua_2.webp'
+import english_bulldog_1 from '@gallery/mixed-media/english_bulldog_1.webp'
+import english_bulldog_2 from '@gallery/mixed-media/english_bulldog_2.webp'
+import english_bulldog_3 from '@gallery/mixed-media/english_bulldog_3.webp'
+import english_bulldog_4 from '@gallery/mixed-media/english_bulldog_4.webp'
+import fiona from '@gallery/mixed-media/fiona.webp'
+import freddie_1 from '@gallery/mixed-media/freddie_1.webp'
+import freddie_2 from '@gallery/mixed-media/freddie_2.webp'
+import german_shepard from '@gallery/mixed-media/german_shepard.webp'
+import highlander_girl from '@gallery/mixed-media/highlander_girl.webp'
+import mastiff from '@gallery/mixed-media/mastiff.webp'
+import max from '@gallery/mixed-media/max.webp'
+import pug_1 from '@gallery/mixed-media/pug_1.webp'
+import pug_2 from '@gallery/mixed-media/pug_2.webp'
+import pug_3 from '@gallery/mixed-media/pug_3.webp'
+import russian_wolfhound_1 from '@gallery/mixed-media/russian_wolfhound_1.webp'
+import russian_wolfhound_2 from '@gallery/mixed-media/russian_wolfhound_2.webp'
+import scottish_collie from '@gallery/mixed-media/scottish_collie.webp'
+import siblings from '@gallery/mixed-media/siblings.webp'
+import stretching from '@gallery/mixed-media/stretching.webp'
+import twin_english_bulldogs from '@gallery/mixed-media/twin_english_bulldogs.webp'
+import twin_horses from '@gallery/mixed-media/twin_horses.webp'
+import zeke from '@gallery/mixed-media/zeke.webp'
+import GalleryItem from '../GalleryItem.astro'
+---
+
+<!-- Mixed Media -->
+<section id="mixed-media" class="translate-y-4 pt-20 opacity-0 transition-all duration-500">
+	<h1 class="section__title text-center text-4xl font-semibold">Mixed Media</h1>
+	<div class="custom-grid grid grid-cols-1 gap-1 md:grid-cols-24">
+		<GalleryItem src={basset} alt="Basset" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={chihuahua_1} alt="Chihuahua 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={chihuahua_2} alt="Chihuahua 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={english_bulldog_1} alt="English Bulldog 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={english_bulldog_2} alt="English Bulldog 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={english_bulldog_3} alt="English Bulldog 3" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={english_bulldog_4} alt="English Bulldog 4" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={fiona} alt="Fiona" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={freddie_1} alt="Freddie 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={freddie_2} alt="Freddie 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={german_shepard} alt="German Shepard" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={highlander_girl} alt="Highlander Girl" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={mastiff} alt="Mastiff" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={max} alt="Max" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={pug_1} alt="Pug 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={pug_2} alt="Pug 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={pug_3} alt="Pug 3" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={russian_wolfhound_1} alt="Russian Wolfhound 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={russian_wolfhound_2} alt="Russian Wolfhound 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={scottish_collie} alt="Scottish Collie" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={siblings} alt="Siblings" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={stretching} alt="Stretching" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={twin_english_bulldogs} alt="Twin English Bulldogs" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={twin_horses} alt="Twin Horses" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={zeke} alt="Zeke" class="md:col-span-4 md:row-span-4" />
+	</div>
+</section>
+
+<style>
+	@media screen and (min-width: 768px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(30, 1fr);
+		}
+	}
+</style>

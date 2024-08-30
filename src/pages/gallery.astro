@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Pencil from '../components/Gallery/Pencil.astro'
+import Watercolor from '../components/Gallery/Watercolor.astro'
+import MixedMedia from '../components/Gallery/MixedMedia.astro'
+import Ink from '../components/Gallery/Ink.astro'
+import OilOnCanvas from '../components/Gallery/OilOnCanvas.astro'
+import OilsAndPastels from '../components/Gallery/OilsAndPastels.astro'
+---
+
+<Layout>
+	<!-- Start -->
+	<main id="gallery" class="container mx-auto flex flex-col items-center gap-2 p-1">
+		<section id="gallery-start" class="my-10 p-4">
+			<h1 class="section__title text-center text-6xl font-semibold">Gallery</h1>
+		</section>
+		<Pencil />
+		<Watercolor />
+		<OilOnCanvas />
+		<OilsAndPastels />
+		<MixedMedia />
+		<Ink />
+	</main>
+</Layout>
+
+<script>
+	console.log('Gallery Page')
+</script>

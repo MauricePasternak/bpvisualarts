@@ -1,0 +1,156 @@
+---
+import { Icon } from 'astro-icon/components'
+import Logo from './Logo.astro'
+
+import Barbara_Face from '../assets/Barbara_Face.png'
+import MobileLinkDropdown from './MobileLinkDropdown.astro'
+import MobileLink from './MobileLink.astro'
+import DesktopLink from './DesktopLink.astro'
+---
+
+<header
+	x-data="{ open: false }"
+	@keydown.window.escape="open = false"
+	class="sticky top-0 w-full bg-slate-800 shadow-md z-10"
+>
+	<!-- DESKTOP -->
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="flex h-16 items-center justify-between">
+			<!-- Nav Container -->
+			<div class="flex flex-grow items-center justify-between">
+				<!-- Header Text -->
+				<div class="flex flex-shrink-0">
+					<Logo class="w-10 text-white" />
+					<h1 class="ml-2 text-2xl font-semibold uppercase tracking-widest text-white">
+						<a href="/">BP Visual Arts</a>
+					</h1>
+				</div>
+
+				<!-- Desktop Nav Content -->
+				<div class="hidden lg:block">
+					<div class="flex items-center">
+						<DesktopLink />
+
+						<div class="relative" x-data="{ open: false}">
+							<button
+								@click="open = !open"
+								class="ml-4 flex flex-row items-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-700 focus:text-white focus:outline-none"
+							>
+								<Icon name="mdi:paintbrush" class="h-8 w-8 text-white" />
+								<span class="mx-2">Gallery</span>
+								<Icon
+									name="mdi:chevron-down"
+									class="h-8 w-8 transform text-white transition-transform duration-200"
+									:class="{'rotate-180': open, 'rotate-0': !open}"
+								/>
+							</button>
+							<div
+								@click.away="open = false"
+								x-show="open"
+								x-transition:enter="transition ease-out duration-100"
+								x-transition:enter-start="transform opaity-0 scale-95"
+								x-transition:enter-end="transform opacity-100 scale-100"
+								x-transition:leave="transition ease-in duration-75"
+								x-transition:leave-start="transform opacity-100 scale-100"
+								x-transition:leave-end="transform opacity-0 scale-95"
+								class="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg"
+							>
+								<div class="shadow-xs rounded-md bg-white py-1">
+									<a
+										href="/gallery/#pencil"
+										class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none"
+									>
+										Pencil
+									</a>
+									<a
+										href="/gallery/#watercolor"
+										class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none"
+									>
+										Watercolor
+									</a>
+									<a
+										href="/gallery/#oils-and-pastels"
+										class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none"
+									>
+										Oils and Pastels
+									</a>
+									<a
+										href="/gallery/#oil-on-canvas"
+										class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none"
+									>
+										Oil on Canvas
+									</a>
+									<a
+										href="/gallery/#mixed-media"
+										class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none"
+									>
+										Mixed Media
+									</a>
+									<a
+										href="/gallery/#ink"
+										class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none"
+									>
+										Ink
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Hamburger Menu -->
+			<div class="-mr-2 flex lg:hidden">
+				<button
+					@click="open = !open"
+					class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:bg-gray-700 focus:text-white focus:outline-none"
+					x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
+					x-bind:aria-expanded="open"
+				>
+					<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+						<path
+							:class="{'hidden': open, 'inline-flex': !open }"
+							class="inline-flex"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"></path>
+						<path
+							:class="{'hidden': !open, 'inline-flex': open }"
+							class="hidden"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- MOBILE -->
+	<div :class="{'block': open, 'hidden': !open}" class="hidden lg:hidden">
+		<div class="container mx-auto px-6">
+			<nav class="pb-3 pt-2">
+				<a
+					href="/"
+					class="flex flex-row items-center rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white focus:bg-gray-700 focus:text-white focus:outline-none"
+				>
+					<Icon name="mdi:home" class="h-8 w-8 text-white" />
+
+					<span class="ml-2">Home</span>
+				</a>
+
+				<MobileLinkDropdown />
+			</nav>
+		</div>
+		<!-- Tail portion with Avatar & brief contact -->
+		<div class="container mx-auto flex w-full items-center border-t border-gray-700 px-6 py-4 text-left">
+			<img class="h-10 w-10 rounded-full" src={Barbara_Face.src} alt="" />
+			<div class="ml-3">
+				<div class="text-base font-medium leading-none text-white">Barbara Pasternak</div>
+				<div class="mt-1 text-sm font-medium leading-none text-gray-400">fryderyk7@hotmail.ca</div>
+			</div>
+		</div>
+	</div>
+</header>

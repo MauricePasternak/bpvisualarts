@@ -1,0 +1,35 @@
+---
+import diagnosis from '@gallery/ink/diagnosis.webp'
+import fracture from '@gallery/ink/fracture.webp'
+import pondering from '@gallery/ink/pondering.webp'
+import scrap_parts from '@gallery/ink/scrap_parts.webp'
+import shelter_bed from '@gallery/ink/shelter_bed.webp'
+import split_selves_1 from '@gallery/ink/split_selves_1.webp'
+import split_selves_2 from '@gallery/ink/split_selves_2.webp'
+import the_narrow_street from '@gallery/ink/the_narrow_street.webp'
+import GalleryItem from '../GalleryItem.astro'
+---
+
+<!-- Ink -->
+<section id="ink" class="translate-y-4 pt-20 opacity-0 transition-all duration-500">
+	<h1 class="section__title text-center text-4xl font-semibold">Ink</h1>
+	<div class="custom-grid grid grid-cols-1 gap-1 md:grid-cols-24">
+		<GalleryItem src={diagnosis} alt="Diagnosis" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={fracture} alt="Fracture" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={pondering} alt="Pondering" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={scrap_parts} alt="Scrap Parts" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={shelter_bed} alt="Shelter Bed" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={split_selves_1} alt="Split Selves 1" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={split_selves_2} alt="Split Selves 2" class="md:col-span-4 md:row-span-4" />
+		<GalleryItem src={the_narrow_street} alt="The Narrow Street" class="md:col-span-4 md:row-span-4" />
+	</div>
+</section>
+
+<style>
+	@media screen and (min-width: 768px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(10, 1fr);
+		}
+	}
+</style>

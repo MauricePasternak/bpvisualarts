@@ -1,0 +1,88 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="relative" x-data="{ open: false }">
+	<button
+		@click="open = true"
+		class="mt-1 flex w-full flex-row items-center rounded-md px-3 py-2 text-left text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-700 focus:text-white focus:outline-none"
+	>
+		<slot name="icon">
+			<Icon name="mdi:paintbrush" class="h-8 w-8 text-white" />
+		</slot>
+		<slot name="text">
+			<span class="mx-2">Gallery</span>
+		</slot>
+		<slot name="trigger-icon">
+			<Icon
+				name="mdi:chevron-down"
+				class="h-8 w-8 transform text-white transition-transform duration-200"
+				:class="{'rotate-180': open, 'rotate-0': !open}"
+			/>
+		</slot>
+	</button>
+	<div
+		x-show="open"
+		@click.away="open = false"
+		x-transition:enter="transition ease-out duration-100"
+		x-transition:enter-start="transform opaity-0 -translate-y-2"
+		x-transition:enter-end="transform opacity-100"
+		x-transition:leave="transition ease-in duration-100"
+		x-transition:leave-start="transform opacity-100"
+		x-transition:leave-end="transform opacity-0 scale-95 -translate-y-2"
+		class="shadow-xs mt-2 grid rounded-md bg-white px-2 py-2"
+		role="menu"
+		aria-orientation="vertical"
+		aria-labelledby="user-menu"
+		role="menuitem"
+	>
+		<a
+			@click="open = false"
+			href="/gallery/#pencil"
+			class="flex flex-row items-center rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none"
+			role="menuitem"
+		>
+			Pencil
+		</a>
+		<a
+			@click="open = false"
+			href="/gallery/#watercolor"
+			class="mt-1 flex flex-row items-center rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none"
+			role="menuitem"
+		>
+			Watercolor
+		</a>
+		<a
+			@click="open = false"
+			href="/gallery/#oils-and-pastels"
+			class="mt-1 flex flex-row items-center rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none"
+			role="menuitem"
+		>
+			Oils and Pastels
+		</a>
+		<a
+			@click="open = false"
+			href="/gallery/#oil-on-canvas"
+			class="mt-1 flex flex-row items-center rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none"
+			role="menuitem"
+		>
+			Oil on Canvas
+		</a>
+		<a
+			@click="open = false"
+			href="/gallery/#mixed-media"
+			class="mt-1 flex flex-row items-center rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none"
+			role="menuitem"
+		>
+			Mixed Media
+		</a>
+		<a
+			@click="open = false"
+			href="/gallery/#ink"
+			class="mt-1 flex flex-row items-center rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none"
+			role="menuitem"
+		>
+			Ink
+		</a>
+	</div>
+</div>

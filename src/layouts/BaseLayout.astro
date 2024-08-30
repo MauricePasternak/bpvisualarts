@@ -1,0 +1,70 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>bpvisualarts</title>
+		<ViewTransitions />
+	</head>
+	<slot />
+
+	<script>
+		const gallery_section_names = ['pencil', 'watercolor', 'oil-on-canvas', 'oils-and-pastels', 'mixed-media', 'ink']
+
+		function registerIntersectionObserver() {
+			// Get the gallery section nodes first and early return if not found
+			const galleryNotes = gallery_section_names
+				.map((section_name) => {
+					const section = document.querySelector(`#${section_name}`)
+					return section
+				})
+				.filter((section) => section != null)
+			if (galleryNotes.length === 0) return
+
+			// Define the observer
+			const observer = new IntersectionObserver(
+				(entries, observer) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							const section = entry.target
+							const section_name = section.id
+							console.log(`Section ${section_name} is intersecting`)
+
+							// Update the section to fade in
+							section.classList.add('fade-in')
+
+							// Stop observing the section
+							observer.unobserve(section)
+						}
+					})
+				},
+				{ threshold: 0, rootMargin: '0px 0px -10% 0px' }
+			)
+
+			// Observing the gallery sections
+			galleryNotes.forEach((section) => {
+				observer.observe(section)
+			})
+		}
+
+		document.addEventListener('astro:after-swap', () => {
+			registerIntersectionObserver()
+		})
+		document.addEventListener('DOMContentLoaded', () => {
+			registerIntersectionObserver()
+		})
+	</script>
+
+	<style is:global>
+		:root {
+			--nav-height: 4rem;
+		}
+	</style>
+</html>
