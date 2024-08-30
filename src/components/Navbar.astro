@@ -4,14 +4,13 @@ import Logo from './Logo.astro'
 
 import Barbara_Face from '../assets/Barbara_Face.png'
 import MobileLinkDropdown from './MobileLinkDropdown.astro'
-import MobileLink from './MobileLink.astro'
 import DesktopLink from './DesktopLink.astro'
 ---
 
 <header
 	x-data="{ open: false }"
 	@keydown.window.escape="open = false"
-	class="sticky top-0 w-full bg-slate-800 shadow-md z-10"
+	class="sticky top-0 z-10 w-full bg-slate-800 shadow-md"
 >
 	<!-- DESKTOP -->
 	<div class="container mx-auto px-6 lg:px-8">

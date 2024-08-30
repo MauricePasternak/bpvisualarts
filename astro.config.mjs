@@ -6,13 +6,7 @@ import alpinejs from '@astrojs/alpinejs'
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), icon(), alpinejs({ entrypoint: '/src/entrypoint' })],
+	integrations: [tailwind(), icon(), alpinejs()],
 	site: 'https://github.com/MauricePasternak/bpvisualarts.github.io',
-	vite: {
-		resolve: {
-			alias: {
-				'@gallery': '/src/assets/gallery'
-			}
-		}
-	}
+	base: '/bpvisualarts',
 })
