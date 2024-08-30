@@ -10,11 +10,11 @@ import Layout from '../layouts/Layout.astro'
 	<main class="p-2">
 		<!-- Hero -->
 		<section class="home container mx-auto mb-10 mt-6" id="home">
-			<div class="home__container bd-container bd-grid grid grid-cols-1 gap-2 lg:grid-cols-3 gap-4">
+			<div class="home__container bd-container bd-grid grid grid-cols-1 gap-2 gap-4 lg:grid-cols-3">
 				<div class="home__data flex flex-col items-start lg:justify-center">
-					<h1 class="home__title text-5xl md:text-6xl font-semibold">Artistic Excellence</h1>
+					<h1 class="home__title text-5xl font-semibold md:text-6xl">Artistic Excellence</h1>
 					<h2 class="home__subtitl mt-2 text-3xl font-light">Take a Snapshot of Life</h2>
-					<a href="gallery.html" class="button mt-6 rounded-full bg-green-600 px-4 py-4 text-xl text-white"
+					<a href="/bpvisualarts/gallery" class="button mt-6 rounded-full bg-green-600 px-4 py-4 text-xl text-white"
 						>View Gallery</a
 					>
 				</div>
@@ -30,13 +30,13 @@ import Layout from '../layouts/Layout.astro'
 			<div class="about__container flex flex-col items-center gap-2">
 				<h1 class="about__title text-4xl font-semibold">About</h1>
 				<h2 class="about__subtitle text-2xl font-light">A bit about the artist</h2>
-				<article class="about__info mt-3 flex w-full flex-col md:flex-row gap-4 lg:justify-between lg:gap-4">
+				<article class="about__info mt-3 flex w-full flex-col gap-4 md:flex-row lg:justify-between lg:gap-4">
 					<Image
 						src={BarbaraWithFreddie}
 						alt="Barbara with Fryderyk"
 						class="about__img block w-[400px] self-center rounded-2xl object-contain md:w-[390px] lg:w-1/3"
 					/>
-					<p class="about__description prose text-justify lg:prose-lg xl:prose-2xl flex-grow">
+					<p class="about__description prose flex-grow text-justify lg:prose-lg xl:prose-2xl">
 						I was born in Warsaw, Poland. I studied in arts specialization programs both in high school and university
 						for over 9 years, becoming acquainted with a wide variety of artistic forms including pencil based drawing,
 						painting, sculpture, graphics and ceramics.<br /><br />I immigrated to Canada and worked as an illustrator
