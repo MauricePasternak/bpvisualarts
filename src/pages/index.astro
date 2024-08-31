@@ -2,23 +2,23 @@
 import { Icon } from 'astro-icon/components'
 import Image from 'astro/components/Image.astro'
 import BarbaraWithFreddie from '../assets/Barbara_with_Freddie.png'
-import HeroLogo from '../assets/HeroLogo.png'
 import Layout from '../layouts/Layout.astro'
+import HeroLogo from '../components/HeroLogo.astro'
 ---
 
 <Layout>
 	<main class="p-2">
 		<!-- Hero -->
 		<section class="home container mx-auto mb-10 mt-6" id="home">
-			<div class="home__container bd-container bd-grid grid grid-cols-1 gap-2 gap-4 lg:grid-cols-3">
+			<div class="home__container bd-container bd-grid grid grid-cols-1 lg:grid-cols-3">
 				<div class="home__data flex flex-col items-start lg:justify-center">
 					<h1 class="home__title text-5xl font-semibold md:text-6xl">Artistic Excellence</h1>
 					<h2 class="home__subtitl mt-2 text-3xl font-light">Take a Snapshot of Life</h2>
 					<a href="/gallery" class="button mt-6 rounded-full bg-green-600 px-4 py-4 text-xl text-white">View Gallery</a>
 				</div>
 
-				<div class="home__img-container lg:col-span-2">
-					<Image src={HeroLogo} alt="" class="home__img" />
+				<div class="home__img-container lg:col-span-2 mt-4 md:mt-0">
+					<HeroLogo class="home__img w-full h-full" />
 				</div>
 			</div>
 		</section>
