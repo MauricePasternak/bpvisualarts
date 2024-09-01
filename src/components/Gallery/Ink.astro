@@ -12,16 +12,36 @@ import GalleryItem from '../GalleryItem.astro'
 
 <!-- Ink -->
 <section id="ink" class="translate-y-4 pt-20 opacity-0 transition-all duration-500">
-	<h1 class="section__title text-center text-4xl font-semibold">Ink</h1>
-	<div class="custom-grid grid grid-cols-1 gap-1 md:grid-cols-24">
-		<GalleryItem src={diagnosis} alt="Diagnosis" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={fracture} alt="Fracture" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={pondering} alt="Pondering" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={scrap_parts} alt="Scrap Parts" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={shelter_bed} alt="Shelter Bed" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={split_selves_1} alt="Split Selves 1" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={split_selves_2} alt="Split Selves 2" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={the_narrow_street} alt="The Narrow Street" class="md:col-span-4 md:row-span-4" />
+	<h1 class="section__title mb-10 text-center text-4xl font-semibold lg:text-5xl">Ink</h1>
+	<div class="custom-grid grid grid-cols-1 gap-1">
+		<GalleryItem
+			src={the_narrow_street}
+			alt="The Narrow Street"
+			class="md:col-span-8 md:col-start-1 md:row-span-8 md:row-start-1"
+		/>
+		<GalleryItem src={pondering} alt="Pondering" class="md:col-span-8 md:col-start-9 md:row-span-8 md:row-start-1" />
+		<GalleryItem
+			src={shelter_bed}
+			alt="Shelter Bed"
+			class="md:col-start-17 md:col-span-8 md:row-span-16 md:row-start-1"
+		/>
+		<GalleryItem src={fracture} alt="Fracture" class="md:col-span-8 md:col-start-1 md:row-span-8 md:row-start-9" />
+		<GalleryItem
+			src={scrap_parts}
+			alt="Scrap Parts"
+			class="md:col-span-8 md:col-start-9 md:row-span-8 md:row-start-9"
+		/>
+		<GalleryItem src={diagnosis} alt="Diagnosis" class="md:row-start-17 md:col-span-8 md:col-start-17 md:row-span-8" />
+		<GalleryItem
+			src={split_selves_1}
+			alt="Split Selves 1"
+			class="md:row-start-17 md:col-span-8 md:col-start-9 md:row-span-8"
+		/>
+		<GalleryItem
+			src={split_selves_2}
+			alt="Split Selves 2"
+			class="md:row-start-17 md:col-span-8 md:col-start-1 md:row-span-8"
+		/>
 	</div>
 </section>
 
@@ -29,7 +49,20 @@ import GalleryItem from '../GalleryItem.astro'
 	@media screen and (min-width: 768px) {
 		.custom-grid {
 			grid-template-columns: repeat(24, 1fr);
-			grid-template-rows: repeat(10, 1fr);
+			grid-template-rows: repeat(24, 2.5rem);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(24, 3rem);
+		}
+	}
+	@media screen and (min-width: 1536px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(24, 5rem);
 		}
 	}
 </style>

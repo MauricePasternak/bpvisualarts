@@ -23,29 +23,94 @@ import GalleryItem from '../GalleryItem.astro'
 ---
 
 <!-- Watercolor -->
-<section id="watercolor" class="translate-y-4 pt-20 opacity-0 transition-all duration-500">
-	<h1 class="section__title text-center text-4xl font-semibold">Watercolor</h1>
-	<div class="custom-grid grid grid-cols-1 gap-1 md:grid-cols-24">
-		<GalleryItem src={apples_and_pears} alt="Apples and Pears" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={asian_boy_with_apples} alt="Asian Boy with Apples" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={asian_boy_with_flowers} alt="Asian Boy with Flowers" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={bbq} alt="BBQ" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={bored_2} alt="Bored 2" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={bored} alt="Bored" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={boy_in_bath} alt="Boy in Bath" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={boy_sucking_finger} alt="Boy Sucking Finger Watercolor" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={boy_with_apples} alt="Boy with Apples" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={boy_with_sunflower} alt="Boy with Sunflower" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={checkers_match_watercolor} alt="Checkers Match Watercolor" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={child_with_coral_necklace} alt="Child with Coral Necklace" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={girl_with_pigtails} alt="Girl with Pigtails" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={girl_with_sunflower} alt="Girl with Sunflower" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={green_peas} alt="Green Peas" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={mess} alt="Mess" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={potted_plants} alt="Potted Plants" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={the_three_chairs} alt="The Three Chairs" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={tree_by_water} alt="Tree by Water" class="md:col-span-4 md:row-span-4" />
-		<GalleryItem src={woman_with_a_blanket} alt="Woman with a Blanket" class="md:col-span-4 md:row-span-4" />
+<section id="watercolor" class="translate-y-4 pt-20 opacity-0 transition-all duration-500 w-full">
+	<h1 class="section__title mb-10 text-center text-4xl font-semibold lg:text-5xl">Watercolor</h1>
+	<div class="custom-grid grid grid-cols-1 gap-1">
+		<GalleryItem
+			src={asian_boy_with_apples}
+			alt="Asian Boy with Apples"
+			class="md:col-span-6 md:col-start-1 md:row-span-8 md:row-start-1"
+		/>
+		<GalleryItem
+			src={child_with_coral_necklace}
+			alt="Child with Coral Necklace"
+			class="md:col-span-6 md:col-start-7 md:row-span-8 md:row-start-1"
+		/>
+		<GalleryItem
+			src={asian_boy_with_flowers}
+			alt="Asian Boy with Flowers"
+			class="md:col-span-6 md:col-start-13 md:row-span-8 md:row-start-1"
+		/>
+		<GalleryItem
+			src={boy_with_apples}
+			alt="Boy with Apples"
+			class="md:col-start-19 md:col-span-6 md:row-span-8 md:row-start-1"
+		/>
+		<GalleryItem
+			src={girl_with_pigtails}
+			alt="Girl with Pigtails"
+			class="md:col-span-6 md:col-start-1 md:row-span-8 md:row-start-9"
+		/>
+		<GalleryItem
+			src={girl_with_sunflower}
+			alt="Girl with Sunflower"
+			class="md:col-span-6 md:col-start-7 md:row-span-8 md:row-start-9"
+		/>
+		<GalleryItem
+			src={boy_with_sunflower}
+			alt="Boy with Sunflower"
+			class="md:col-span-6 md:col-start-13 md:row-span-8 md:row-start-9"
+		/>
+		<GalleryItem
+			src={boy_sucking_finger}
+			alt="Boy Sucking Finger Watercolor"
+			class="md:col-start-19 md:col-span-6 md:row-span-8 md:row-start-9"
+		/>
+		<GalleryItem
+			src={potted_plants}
+			alt="Potted Plants"
+			class="md:row-start-17 md:col-span-12 md:col-start-1 md:row-span-6"
+		/>
+		<GalleryItem
+			src={the_three_chairs}
+			alt="The Three Chairs"
+			class="md:row-start-17 md:col-span-12 md:col-start-13 md:row-span-8"
+		/>
+		<GalleryItem src={bbq} alt="BBQ" class="md:row-start-23 md:col-span-12 md:col-start-1 md:row-span-8" />
+		<GalleryItem
+			src={tree_by_water}
+			alt="Tree by Water"
+			class="md:row-start-25 md:col-span-6 md:col-start-13 md:row-span-6"
+		/>
+		<GalleryItem
+			src={green_peas}
+			alt="Green Peas"
+			class="md:row-start-25 md:col-start-19 md:col-span-6 md:row-span-6"
+		/>
+		<GalleryItem src={bored_2} alt="Bored 2" class="md:row-start-31 md:col-span-12 md:col-start-1 md:row-span-5" />
+		<GalleryItem src={bored} alt="Bored" class="md:row-start-31 md:col-span-12 md:col-start-13 md:row-span-5" />
+
+		<GalleryItem
+			src={woman_with_a_blanket}
+			alt="Woman with a Blanket"
+			class="md:row-start-36 md:col-span-8 md:col-start-1 md:row-span-14"
+		/>
+		<GalleryItem
+			src={apples_and_pears}
+			alt="Apples and Pears"
+			class="md:row-start-36 md:col-span-8 md:col-start-9 md:row-span-7"
+		/>
+		<GalleryItem
+			src={boy_in_bath}
+			alt="Boy in Bath"
+			class="md:row-start-36 md:col-start-17 md:col-span-8 md:row-span-7"
+		/>
+		<GalleryItem
+			src={checkers_match_watercolor}
+			alt="Checkers Match Watercolor"
+			class="md:row-start-43 md:col-span-8 md:col-start-9 md:row-span-7"
+		/>
+		<GalleryItem src={mess} alt="Mess" class="md:row-start-43 md:col-start-17 md:col-span-8 md:row-span-7" />
 	</div>
 </section>
 
@@ -53,7 +118,20 @@ import GalleryItem from '../GalleryItem.astro'
 	@media screen and (min-width: 768px) {
 		.custom-grid {
 			grid-template-columns: repeat(24, 1fr);
-			grid-template-rows: repeat(20, 1fr);
+			grid-template-rows: repeat(50, 2.5rem);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(50, 3.5rem);
+		}
+	}
+	@media screen and (min-width: 1536px) {
+		.custom-grid {
+			grid-template-columns: repeat(24, 1fr);
+			grid-template-rows: repeat(50, 6rem);
 		}
 	}
 </style>
